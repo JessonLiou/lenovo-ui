@@ -1,0 +1,26 @@
+[
+  {
+    "lang": "zh-CN",
+    "pages": {
+      "index": {
+        "menu-components": "组件"
+      },
+      "welcome": {
+        "title": "欢迎"
+      },
+      "component": {}
+    }
+  },
+  {
+    "lang": "en-US",
+    "pages": {
+      "index": {
+        "menu-components": "Components"
+      },
+      "welcome": {
+        "title": "Welcome"
+      },
+      "component": {}
+    }
+  }
+]

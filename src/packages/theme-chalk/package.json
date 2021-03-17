@@ -1,0 +1,23 @@
+{
+  "name": "lenovo-theme-chalk",
+  "version": "0.1",
+  "description": "Lenovo component chalk theme.",
+  "main": "lib/index.css",
+  "style": "lib/index.css",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "gulp build"
+  },
+  "author": "liujs10@lenovo.com",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {}
+}

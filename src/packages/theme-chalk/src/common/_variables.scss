@@ -1,0 +1,111 @@
+// Color
+$ln-color-white: #fff !default;
+$ln-color-black: #000 !default;
+
+$ln-color-primary: #1890ff !default;
+$ln-color-success: #52c41a !default;
+$ln-color-warning: #faad14 !default;
+$ln-color-danger: #f5222d !default;
+
+$ln-color-primary-light-1: mix($ln-color-white, $ln-color-primary, 10%) !default;
+$ln-color-success-light-1: mix($ln-color-white, $ln-color-success, 10%) !default;
+$ln-color-warning-light-1: mix($ln-color-white, $ln-color-warning, 10%) !default;
+$ln-color-danger-light-1: mix($ln-color-white, $ln-color-danger, 10%) !default;
+
+// Font
+$ln-font-size-sm: 12px !default;
+$ln-font-size-base: 14px !default;
+$ln-font-size-lg: 16px !default;
+
+$ln-font-color-primary: #333 !default;
+$ln-font-color-disable: #c0c4cc !default;
+
+// Border
+$ln-border-width-base: 1px !default;
+
+$ln-border-color-base: #d9d9d9 !default;
+$ln-border-color-disable: $ln-border-color-base !default;
+
+// Padding
+$ln-padding-xs : 8px; // small items
+$ln-padding-sm : 12px; // Form controls and items
+$ln-padding-md : 16px; // small containers and buttons
+$ln-padding-lg : 24px; // containers
+
+// Layout
+$ln-grid-columns: 12 !default;
+
+// Transition function
+$ln-ease-base-out : cubic-bezier(0.7, 0.3, 0.1, 1);
+$ln-ease-base-in : cubic-bezier(0.9, 0, 0.3, 0.7);
+$ln-ease-out : cubic-bezier(0.215, 0.61, 0.355, 1);
+$ln-ease-in : cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ln-ease-in-out : cubic-bezier(0.645, 0.045, 0.355, 1);
+$ln-ease-out-back : cubic-bezier(0.12, 0.4, 0.29, 1.46);
+$ln-ease-in-back : cubic-bezier(0.71, -0.46, 0.88, 0.6);
+$ln-ease-in-out-back : cubic-bezier(0.71, -0.46, 0.29, 1.46);
+$ln-ease-out-circ : cubic-bezier(0.08, 0.82, 0.17, 1);
+$ln-ease-in-circ : cubic-bezier(0.6, 0.04, 0.98, 0.34);
+$ln-ease-in-out-circ : cubic-bezier(0.78, 0.14, 0.15, 0.86);
+$ln-ease-out-quint : cubic-bezier(0.23, 1, 0.32, 1);
+$ln-ease-in-quint : cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ln-ease-in-out-quint : cubic-bezier(0.86, 0, 0.07, 1);
+
+// Transition
+$ln-transition-all-base: all .3s $ln-ease-in-out !default;
+
+// Button
+$ln-btn-border-width-base: $ln-border-width-base !default;
+
+$ln-btn-height-base: 32px !default;
+$ln-btn-height-lg: 40px !default;
+$ln-btn-height-sm: 24px !default;
+
+$ln-btn-padding-base: 0 $ln-padding-md - 1px !default;
+$ln-btn-padding-lg: $ln-btn-padding-base !default;
+$ln-btn-padding-sm: 0 $ln-padding-sm - 1px !default;
+
+$ln-btn-font-size-sm: $ln-font-size-sm !default;
+$ln-btn-font-size-base: $ln-font-size-base !default;
+$ln-btn-font-size-lg: $ln-font-size-lg !default;
+
+$ln-btn-border-radius: 4px !default;
+
+// default
+$ln-btn-default-color: $ln-font-color-primary !default;
+$ln-btn-default-bg: $ln-color-white !default;
+$ln-btn-default-border: $ln-border-color-base !default;
+
+$ln-btn-default-disable-color: $ln-font-color-disable !default;
+$ln-btn-default-disable-bg: $ln-color-white !default;
+$ln-btn-default-disable-border: $ln-border-color-disable !default;
+
+$ln-btn-default-hover-color: $ln-color-primary !default;
+$ln-btn-default-hover-bg: $ln-btn-default-bg !default;
+$ln-btn-default-hover-border: $ln-btn-default-hover-color !default;
+
+// primary
+$ln-btn-primary-color: $ln-color-white !default;
+$ln-btn-primary-bg: $ln-color-primary !default;
+$ln-btn-primary-border: $ln-btn-primary-bg !default;
+
+$ln-btn-primary-disable-color: $ln-btn-primary-color !default;
+$ln-btn-primary-disable-bg: mix($ln-color-white, $ln-btn-primary-bg) !default;
+$ln-btn-primary-disable-border: $ln-btn-primary-disable-bg !default;
+
+$ln-btn-primary-hover-color: $ln-btn-primary-color !default;
+$ln-btn-primary-hover-bg: mix($ln-color-white, $ln-btn-primary-bg, 20%) !default;
+$ln-btn-primary-hover-border: $ln-btn-primary-hover-bg !default;
+
+// danger
+$ln-btn-danger-color: $ln-color-white !default;
+$ln-btn-danger-bg: $ln-color-danger !default;
+$ln-btn-danger-border: $ln-btn-danger-bg !default;
+
+$ln-btn-danger-disable-color: $ln-btn-danger-color !default;
+$ln-btn-danger-disable-bg: mix($ln-color-white, $ln-btn-danger-bg) !default;
+$ln-btn-danger-disable-border: $ln-btn-danger-disable-bg !default;
+
+$ln-btn-danger-hover-color: $ln-btn-danger-color !default;
+$ln-btn-danger-hover-bg: mix($ln-color-white, $ln-btn-danger-bg, 20%) !default;
+$ln-btn-danger-hover-border: $ln-btn-danger-hover-bg !default;

@@ -1,0 +1,38 @@
+@import 'common/variables';
+@import 'mixins/utils';
+@import 'mixins/button';
+
+@include b(button) {
+  position: relative;
+  display: inline-block;
+  border: $ln-border-width-base solid transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: $ln-transition-all-base;
+  outline: none;
+  @include button-size($ln-btn-height-base, $ln-btn-padding-base, $ln-btn-font-size-base, $ln-btn-border-radius);
+
+  [class*="#{$namespace}-icon"] + span {
+    margin-left: 5px;
+  }
+
+  @include m(small) {
+    @include button-size($ln-btn-height-sm, $ln-btn-padding-sm, $ln-btn-font-size-sm, $ln-btn-border-radius);
+  }
+
+  @include m(large) {
+    @include button-size($ln-btn-height-lg, $ln-btn-padding-lg, $ln-btn-font-size-lg, $ln-btn-border-radius);
+  }
+
+  @include m(default) {
+    @include button-variant-default();
+  }
+
+  @include m(primary) {
+    @include button-variant-primary();
+  }
+
+  @include m(danger) {
+    @include button-variant-danger();
+  }
+}

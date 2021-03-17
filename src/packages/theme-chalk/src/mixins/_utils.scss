@@ -1,0 +1,52 @@
+@import '../common/config';
+@import '../functions/utils';
+
+// Namespace prefix
+//
+// Add namespace for selector.
+@mixin namespace($selector) {
+  $new-selector: '';
+
+  @each $item in $selector {
+    $new-selector: #{$new-selector + '.' + add-namespace($item) + ','};
+  }
+
+  #{$new-selector} {
+    @content;
+  }
+}
+
+// BEM
+//
+// Used for BEN naming method.
+@mixin b($block) {
+  $block: add-namespace($block);
+
+  .#{$block} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $selector: '';
+
+  @each $item in $element {
+    $selector: #{$selector + & + $element-separator + $item + ','};
+  }
+
+  @at-root #{$selector} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  $selector: '';
+
+  @each $item in $modifier {
+    $selector: #{$selector + & + $modifier-separator + $item + ","};
+  }
+
+  @at-root #{$selector} {
+    @content;
+  }
+}

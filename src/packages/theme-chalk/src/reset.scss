@@ -1,0 +1,5 @@
+@import 'common/config';
+
+[class*="#{$namespace}-"] {
+  box-sizing: border-box;
+}

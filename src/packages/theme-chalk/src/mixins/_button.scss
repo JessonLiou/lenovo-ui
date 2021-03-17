@@ -1,0 +1,98 @@
+@import '../common/variables';
+
+@mixin button-color($color, $background, $border) {
+  border-color: $border;
+  color: $color;
+  background-color: $background;
+}
+
+@mixin button-size($height, $padding, $font-size, $border-radius) {
+  border-radius: $border-radius;
+  height: $height;
+  padding: $padding;
+  font-size: $font-size;
+}
+
+// default button
+@mixin button-variant-default() {
+  @include button-color($ln-btn-default-color, $ln-btn-default-bg, $ln-btn-default-border);
+
+  &:hover,
+  &:focus {
+    @include button-color($ln-btn-default-hover-color, $ln-btn-default-hover-bg, $ln-btn-default-hover-border);
+  }
+
+  &:active,
+  &.active {
+    @include button-color($ln-btn-default-hover-color, $ln-btn-default-hover-bg, $ln-btn-default-hover-border);
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include button-color($ln-btn-default-disable-color, $ln-btn-default-disable-bg, $ln-btn-default-disable-border);
+    }
+  }
+}
+
+// primary button
+@mixin button-variant-primary() {
+  @include button-color($ln-btn-primary-color, $ln-btn-primary-bg, $ln-btn-primary-border);
+
+  &:hover,
+  &:focus {
+    @include button-color($ln-btn-primary-hover-color, $ln-btn-primary-hover-bg, $ln-btn-primary-hover-border);
+  }
+
+  &:active,
+  &.active {
+    @include button-color($ln-btn-primary-hover-color, $ln-btn-primary-hover-bg, $ln-btn-primary-hover-border);
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include button-color($ln-btn-primary-disable-color, $ln-btn-primary-disable-bg, $ln-btn-primary-disable-border);
+    }
+  }
+}
+
+// danger button
+@mixin button-variant-danger() {
+  @include button-color($ln-btn-danger-color, $ln-btn-danger-bg, $ln-btn-danger-border);
+
+  &:hover,
+  &:focus {
+    @include button-color($ln-btn-danger-hover-color, $ln-btn-danger-hover-bg, $ln-btn-danger-hover-border);
+  }
+
+  &:active,
+  &.active {
+    @include button-color($ln-btn-danger-hover-color, $ln-btn-danger-hover-bg, $ln-btn-danger-hover-border);
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include button-color($ln-btn-danger-disable-color, $ln-btn-danger-disable-bg, $ln-btn-danger-disable-border);
+    }
+  }
+}

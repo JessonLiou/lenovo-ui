@@ -1,0 +1,5 @@
+{
+  "button": "./src/packages/button",
+  "row": "./src/packages/row",
+  "col": "./src/packages/col"
+}

@@ -1,0 +1,6 @@
+@import '../common/config';
+
+// Return the selector with namespace prefix.
+@function add-namespace($selector) {
+  @return if($namespace != '', #{$namespace + '-' + $selector}, $selector);
+}

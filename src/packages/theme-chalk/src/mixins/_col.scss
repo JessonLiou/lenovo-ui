@@ -1,0 +1,52 @@
+
+@import '../common/variables';
+@import '../functions/utils';
+
+// Col
+@mixin make-col($size, $columns: $ln-grid-columns) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+// Col offset
+@mixin make-col-offset($size, $columns: $ln-grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Grid columns
+//
+// Used to generate specified number of col and offset classes.
+@mixin make-grid-columns($columns: $ln-grid-columns) {
+  %grid-column {
+    position: relative;
+    width: 100%;
+  }
+
+  @include namespace(col) {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  @include namespace(col-auto) {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+  }
+
+  @for $i from 1 through $columns {
+    @include namespace(col-#{$i}) {
+      @extend %grid-column;
+      @include make-col($i, $columns);
+    }
+  }
+
+  @for $i from 0 through ($columns - 1) {
+    @if ($i != 0) {
+      @include namespace(offset-#{$i}) {
+        @include make-col-offset($i, $columns);
+      }
+    }
+  }
+}
